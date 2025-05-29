@@ -26,8 +26,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
+      
+      - name: Install dependencies
+        run: yarn
 
-      - name: 📦 Install dependencies and build catalog
+      - name: 📦 Build the catalog
         run: yarn build
 
       - name: 💅 Run eslint
