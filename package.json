@@ -10,8 +10,8 @@
   ],
   "scripts": {
     "install": "yarn workspace @kaoto/camel-catalog run build",
-    "version": "lerna version",
-    "publish": "lerna publish from-package"
+    "copy-catalog": "rm -rf catalog && mkdir -p catalog && cp -r packages/camel-catalog/dist/camel-catalog/* catalog/",
+    "build": "yarn workspace @kaoto/camel-catalog run build && yarn copy-catalog"
   },
   "engines": {
     "node": ">=18.x"
