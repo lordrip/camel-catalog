@@ -1,0 +1,51 @@
+name: 📦 Build npm Package
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout source code'
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope: '@kaoto'
+          cache: 'yarn'
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'maven'
+
+      # Install dependencies
+      - name: 🔧 Build catalog
+        run: yarn
+
+      - name: 💅 Run eslint
+        run: yarn workspaces foreach --verbose --all --topological-dev run lint
+
+          # Copy catalog output to root catalog folder
+      - name: 📁 Copy catalog to root
+        run: |
+          mkdir -p catalog
+          cp -r packages/camel-catalog/dist/camel-catalog/* catalog/
+
+      # Check for uncommitted changes
+      - name: 🔍 Check for uncommitted catalog changes
+        run: |
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "❌ Catalog changes detected that are not committed!"
+            git status
+            exit 1
+          else
+            echo "✅ Catalog is up-to-date."
+          fi
+
