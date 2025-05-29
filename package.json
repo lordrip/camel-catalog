@@ -9,7 +9,6 @@
     "packages/*"
   ],
   "scripts": {
-    "install": "yarn workspace @kaoto/camel-catalog run build",
     "copy-catalog": "rm -rf catalog && mkdir -p catalog && cp -r packages/camel-catalog/dist/camel-catalog/* catalog/",
     "build": "yarn workspace @kaoto/camel-catalog run build && yarn copy-catalog"
   },
