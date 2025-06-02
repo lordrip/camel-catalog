@@ -36,11 +36,6 @@ jobs:
       - name: 💅 Run eslint
         run: yarn workspaces foreach --verbose --all --topological-dev run lint
 
-      - name: 📁 Ensure catalog folder is copied (fallback)
-        run: |
-          mkdir -p catalog
-          cp -r packages/camel-catalog/dist/camel-catalog/* catalog/ || true
-
       - name: 🔍 Check for uncommitted catalog changes
         run: |
           if [[ -n $(git status --porcelain) ]]; then
