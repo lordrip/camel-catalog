@@ -9,9 +9,8 @@
     "packages/*"
   ],
   "scripts": {
-    "install": "yarn workspace @kaoto/camel-catalog run build",
-    "version": "lerna version",
-    "publish": "lerna publish from-package"
+    "copy-catalog": "rsync -a --delete packages/camel-catalog/dist/camel-catalog/ catalog/",
+    "build": "yarn workspace @kaoto/camel-catalog run build && yarn copy-catalog"
   },
   "engines": {
     "node": ">=18.x"
