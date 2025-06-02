@@ -74,14 +74,17 @@ public class CatalogGenerator {
         processKameletsCRDs(catalogDefinition);
 
         try {
-            String filename = String.format("%s-%s.json", "index",
-                    Util.generateHash(catalogDefinition.toString()));
+            String content = jsonMapper.writeValueAsString(catalogDefinition);
 
-            File indexFile = outputDirectory.toPath().resolve(filename).toFile();
             catalogDefinition
                     .setName("Camel " + camelCatalogVersionLoader.getRuntime().getLabel() + " " + camelCatalogVersion);
             catalogDefinition.setVersion(camelCatalogVersion);
             catalogDefinition.setRuntime(camelCatalogVersionLoader.getRuntime());
+
+            String filename = String.format("%s-%s.json", "index",
+                    Util.generateHash(content));
+
+            File indexFile = outputDirectory.toPath().resolve(filename).toFile();
             catalogDefinition.setFileName(indexFile.getName());
 
             jsonMapper.writerWithDefaultPrettyPrinter().writeValue(indexFile, catalogDefinition);
