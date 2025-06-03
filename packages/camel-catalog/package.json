@@ -1,14 +1,16 @@
 {
   "name": "@kaoto/camel-catalog",
-  "version": "2.6.0",
+  "version": "0.0.2",
   "type": "commonjs",
   "description": "Camel Catalog and schemas for Kaoto",
   "repository": "https://github.com/KaotoIO/camel-catalog",
-  "repositoryDirectory": "packages/catalog",
+  "repositoryDirectory": "packages/camel-catalog",
   "author": "The Kaoto Team",
   "license": "Apache License v2.0",
-  "private": true,
   "main": "./package.json",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": "./dist",
     "./index.json": "./dist/camel-catalog/index.json",
