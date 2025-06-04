@@ -1,6 +1,6 @@
 {
   "name": "@kaoto/camel-catalog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "commonjs",
   "description": "Camel Catalog and schemas for Kaoto",
   "repository": "https://github.com/KaotoIO/camel-catalog",
@@ -11,8 +11,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist"
+  ],
   "exports": {
-    ".": "./dist",
+    ".": "./dist/index.js",
     "./index.json": "./dist/camel-catalog/index.json",
     "./types": "./dist/types/index.ts",
     "./catalog-index.d.ts": "./dist/types/catalog-index.d.ts",
@@ -20,7 +23,7 @@
     "./*.json": "./dist/camel-catalog/*.json"
   },
   "scripts": {
-    "build": "yarn clean && yarn build:default:catalog && yarn build:ts",
+    "build": "yarn clean && yarn build:default:catalog && yarn build:ts && copyfiles index.js dist",
     "build:mvn": "./mvnw clean package --no-transfer-progress",
     "build:catalog": "node ./scripts/build-catalogs.mjs",
     "build:default:catalog": "yarn run build:mvn; yarn run build:catalog",
@@ -33,6 +36,7 @@
     "@eslint/js": "^9.10.0",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.0.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
@@ -42,5 +46,6 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.4.2",
     "typescript-eslint": "^8.5.0"
-  }
+  },
+  "gitHead": "3ec2b87ef6f7f26feb89a5d976f5463d55c43959"
 }
