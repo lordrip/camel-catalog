@@ -55,3 +55,12 @@ jobs:
           else
             echo "✅ Catalog is up-to-date."
           fi
+
+      - name: 📤 Upload artifacts for publish (only on main)
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-catalog
+          path: |
+            packages/camel-catalog/dist/
+            catalog/
