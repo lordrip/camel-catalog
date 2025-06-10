@@ -67,7 +67,7 @@ jobs:
       - name: 📤 Upload artifacts for publish (only on main)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
           NODE_AUTH_TOKEN: ${{ secrets.KAOTO_NPM_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
