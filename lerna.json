@@ -16,6 +16,10 @@
       "pushArgs": [
         "--follow-tags"
       ],
+      "ignore": [
+        "**/README.md",
+        "**/.github/**"
+      ],
       "yes": true,
     }
   },
