@@ -131,10 +131,11 @@ public class CamelCatalogVersionLoader {
         MavenCoordinates mavenCoordinates = getYamlDslMavenCoordinates(runtime, version);
         loadDependencyInClasspath(mavenCoordinates);
 
-        // Use version-aware resource loading from the version manager to avoid loading the
-        // first element from the classpath, as as this is problematic when loading multiple
-        // camel catalog versions or the Camel YAML DSL
-        InputStream inputStream = kaotoVersionManager.getResourceAsStream(Constants.CAMEL_YAML_DSL_ARTIFACT);
+        // Use version-aware resource loading to ensure we load the correct camel-yaml-dsl.json
+        // for this specific version. The version parameter passed to loadDependencyInClasspath
+        // sets the version in KaotoMavenVersionManager, which is then used by getResourceAsStream
+        // to filter resources by version in the URL path.
+        InputStream inputStream = resourceLoader.getKaotoVersionManager().getResourceAsStream(Constants.CAMEL_YAML_DSL_ARTIFACT);
         if (inputStream == null) {
             LOGGER.log(Level.SEVERE, "No " + Constants.CAMEL_YAML_DSL_ARTIFACT + " file found in the classpath");
             return false;
