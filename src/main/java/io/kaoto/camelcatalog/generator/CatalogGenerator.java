@@ -86,7 +86,7 @@ public class CatalogGenerator {
             File indexFile = outputDirectory.toPath().resolve(filename).toFile();
             catalogDefinition.setFileName(indexFile.getName());
 
-            jsonMapper.writerWithDefaultPrettyPrinter().writeValue(indexFile, catalogDefinition);
+            Util.createTabWriter(jsonMapper).writeValue(indexFile, catalogDefinition);
 
             return catalogDefinition;
         } catch (Exception e) {
@@ -198,7 +198,7 @@ public class CatalogGenerator {
             var outputStream = new ByteArrayOutputStream();
             var writer = new OutputStreamWriter(outputStream);
 
-            try (JsonGenerator jsonGenerator = jsonFactory.createGenerator(writer).useDefaultPrettyPrinter()) {
+            try (JsonGenerator jsonGenerator = jsonFactory.createGenerator(writer).setPrettyPrinter(Util.createTabPrettyPrinter())) {
                 jsonMapper.writeTree(jsonGenerator, root);
                 var rootBytes = outputStream.toByteArray();
                 var outputFileName = String.format("%s-%s.json", filename, Util.generateHash(rootBytes));

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import io.kaoto.camelcatalog.beans.ConfigBean;
 import io.kaoto.camelcatalog.generator.CatalogGeneratorBuilder;
+import io.kaoto.camelcatalog.generator.Util;
 import io.kaoto.camelcatalog.model.CatalogDefinition;
 import io.kaoto.camelcatalog.model.CatalogLibrary;
 import org.apache.commons.io.FileUtils;
@@ -65,7 +66,7 @@ public class GenerateCommand implements Runnable {
 
         var indexFile = outputFolder.toPath().resolve("index.json").toFile();
         try {
-            jsonMapper.writerWithDefaultPrettyPrinter().writeValue(indexFile, library);
+            Util.createTabWriter(jsonMapper).writeValue(indexFile, library);
         } catch (IOException e) {
             throw new RuntimeException("Error writing index file", e);
         }

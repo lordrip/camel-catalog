@@ -16,7 +16,10 @@
 package io.kaoto.camelcatalog.generator;
 
 import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.util.DefaultIndenter;
+import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 
 import java.io.IOException;
 import java.io.StringWriter;
@@ -26,6 +29,23 @@ import java.nio.file.Paths;
 
 public class Util {
     private static final ObjectMapper jsonMapper = new ObjectMapper();
+
+    /**
+     * Creates a pretty printer that uses tabs for indentation instead of spaces.
+     */
+    public static DefaultPrettyPrinter createTabPrettyPrinter() {
+        DefaultPrettyPrinter prettyPrinter = new DefaultPrettyPrinter();
+        prettyPrinter.indentArraysWith(new DefaultIndenter("\t", "\n"));
+        prettyPrinter.indentObjectsWith(new DefaultIndenter("\t", "\n"));
+        return prettyPrinter;
+    }
+
+    /**
+     * Creates an ObjectWriter configured with tab indentation.
+     */
+    public static ObjectWriter createTabWriter(ObjectMapper mapper) {
+        return mapper.writer(createTabPrettyPrinter());
+    }
     public static String generateHash(byte[] content) throws Exception {
         if (content == null)
             return null;
@@ -54,7 +74,7 @@ public class Util {
 
     public static String getPrettyJSON(Object node) throws IOException {
         StringWriter writer = new StringWriter();
-        try (var jsonGenerator = new JsonFactory().createGenerator(writer).useDefaultPrettyPrinter()) {
+        try (var jsonGenerator = new JsonFactory().createGenerator(writer).setPrettyPrinter(createTabPrettyPrinter())) {
             jsonMapper.writeTree(jsonGenerator, jsonMapper.valueToTree(node));
         }
         return writer.toString();

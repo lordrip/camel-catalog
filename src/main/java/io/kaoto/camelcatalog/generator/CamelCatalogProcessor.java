@@ -130,7 +130,7 @@ public class CamelCatalogProcessor {
             answer.set(dataFormatName, catalogTree);
         }
         StringWriter writer = new StringWriter();
-        try (var jsonGenerator = new JsonFactory().createGenerator(writer).useDefaultPrettyPrinter()) {
+        try (var jsonGenerator = new JsonFactory().createGenerator(writer).setPrettyPrinter(Util.createTabPrettyPrinter())) {
             jsonMapper.writeTree(jsonGenerator, answer);
         }
         return writer.toString();
@@ -175,7 +175,7 @@ public class CamelCatalogProcessor {
             answer.set(languageName, catalogTree);
         }
         StringWriter writer = new StringWriter();
-        try (var jsonGenerator = new JsonFactory().createGenerator(writer).useDefaultPrettyPrinter()) {
+        try (var jsonGenerator = new JsonFactory().createGenerator(writer).setPrettyPrinter(Util.createTabPrettyPrinter())) {
             jsonMapper.writeTree(jsonGenerator, answer);
         }
         return writer.toString();
@@ -195,7 +195,7 @@ public class CamelCatalogProcessor {
             }
         });
         StringWriter writer = new StringWriter();
-        try (var jsonGenerator = new JsonFactory().createGenerator(writer).useDefaultPrettyPrinter()) {
+        try (var jsonGenerator = new JsonFactory().createGenerator(writer).setPrettyPrinter(Util.createTabPrettyPrinter())) {
             jsonMapper.writeTree(jsonGenerator, answer);
         }
         return writer.toString();
@@ -241,7 +241,7 @@ public class CamelCatalogProcessor {
             answer.set(loadBalancerName, catalogTree);
         }
         StringWriter writer = new StringWriter();
-        var jsonGenerator = new JsonFactory().createGenerator(writer).useDefaultPrettyPrinter();
+        var jsonGenerator = new JsonFactory().createGenerator(writer).setPrettyPrinter(Util.createTabPrettyPrinter());
         jsonMapper.writeTree(jsonGenerator, answer);
         return writer.toString();
     }

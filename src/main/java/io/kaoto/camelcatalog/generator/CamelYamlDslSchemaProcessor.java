@@ -122,7 +122,7 @@ public class CamelYamlDslSchemaProcessor {
 
         var writer = new StringWriter();
         try {
-            JsonGenerator gen = new JsonFactory().createGenerator(writer).useDefaultPrettyPrinter();
+            JsonGenerator gen = new JsonFactory().createGenerator(writer).setPrettyPrinter(Util.createTabPrettyPrinter());
             jsonMapper.writeTree(gen, answer);
             return writer.toString();
         } catch (Exception e) {
