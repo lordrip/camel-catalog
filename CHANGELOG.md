@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.9 (2026-06-03)
+
+### Bug Fixes
+
+* **types:** Add optional modifier for framework and platform versions ([c77f8eb](https://github.com/KaotoIO/camel-catalog/commit/c77f8eb45c984aa06b905ff039bad725c207a34e))
+
 ## 0.4.8 (2026-06-03)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
