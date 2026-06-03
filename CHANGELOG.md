@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.10 (2026-06-03)
+
+### Bug Fixes
+
+* **quarkus:** Fix loading quarkus camel yaml dsl ([7fc7eff](https://github.com/KaotoIO/camel-catalog/commit/7fc7eff0744f68d6b39487617882a843b593b11e))
+
 ## 0.4.9 (2026-06-03)
 
 ### Bug Fixes
