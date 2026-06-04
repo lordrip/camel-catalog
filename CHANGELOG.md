@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2026-06-04)
+
+### Features
+
+* **catalog:** add cliVersion for catalogs ([463be7f](https://github.com/KaotoIO/camel-catalog/commit/463be7f45fec15f980940975ec92b6a9cb2d8c3e))
+
 ## 0.4.10 (2026-06-03)
 
 ### Bug Fixes
