@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.1 (2026-06-04)
+
+### Bug Fixes
+
+* **catalog:** downgrade camel-main 4.14 and 4.10 to camel CLI compatible patch versions ([1edccf6](https://github.com/KaotoIO/camel-catalog/commit/1edccf6837ae48794a4d17a8103880548f9ac08f))
+
 # 0.5.0 (2026-06-04)
 
 ### Features
