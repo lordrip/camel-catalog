@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2026-06-23)
+
+### Features
+
+* **docs:** updated AI docs ([95bdf87](https://github.com/KaotoIO/camel-catalog/commit/95bdf870402e7e5bd911a366c5c9196e3085dac7))
+
 ## 0.5.5 (2026-06-10)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
