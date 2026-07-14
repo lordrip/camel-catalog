@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.1 (2026-07-14)
+
+### Bug Fixes
+
+* **citrus:** remove actions property from citrus test action schemas ([296294b](https://github.com/KaotoIO/camel-catalog/commit/296294b01abaa96edfb25d204d2df4a3bc06a0a9))
+
 # 0.6.0 (2026-06-23)
 
 ### Features
