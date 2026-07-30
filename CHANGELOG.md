@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2026-07-30)
+
+### Features
+
+* **DataMapper:** Introduce XPath 3.1 function catalog ([88d3bda](https://github.com/KaotoIO/camel-catalog/commit/88d3bda9803537115881ba654d8c6260f294c476))
+
 ## 0.6.1 (2026-07-14)
 
 ### Bug Fixes
