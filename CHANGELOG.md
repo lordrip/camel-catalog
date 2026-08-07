@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2026-08-07)
+
+### Features
+
+* contributing guidelines added ([bf96489](https://github.com/KaotoIO/camel-catalog/commit/bf96489c6cccec1fbb22b1d26899bc5237be1c17))
+
 ## 0.7.1 (2026-08-07)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
