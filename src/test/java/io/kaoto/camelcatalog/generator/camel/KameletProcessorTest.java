@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class KameletProcessorTest {
     private static final List<String> ALLOWED_ENUM_TYPES = List.of("integer", "number", "string");
-    private final ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());;
+    private final ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
 
     private ObjectNode processKamelet(String name) throws Exception {
         var is = Thread.currentThread().getContextClassLoader().getResourceAsStream("kamelets/" + name + ".kamelet.yaml");
