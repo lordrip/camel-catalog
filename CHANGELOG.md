@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.4 (2026-08-18)
+
+### Bug Fixes
+
+* **component:** generate valid schema types for enums ([1f8eb15](https://github.com/KaotoIO/camel-catalog/commit/1f8eb15953d00ded9e9bdee3b57d1bdda6b8aa06))
+
 ## 0.8.3 (2026-08-13)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
