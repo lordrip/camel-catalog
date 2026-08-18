@@ -37,10 +37,10 @@ class K8sSchemaReader {
      * @return the ObjectMeta schema
      */
     public ObjectNode getObjectMetaJSONSchema() {
-        var ObjectMetaJSON = openApiSpec.withObject("/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta");
-        populateReferences(ObjectMetaJSON, openApiSpec.withObject("/components/schemas"));
+        var objectMetaJSON = openApiSpec.withObject("/components/schemas/io.k8s.apimachinery.pkg.apis.meta.v1.ObjectMeta");
+        populateReferences(objectMetaJSON, openApiSpec.withObject("/components/schemas"));
 
-        return removeKubernetesCustomKeywords(ObjectMetaJSON);
+        return removeKubernetesCustomKeywords(objectMetaJSON);
     }
 
     private void populateReferences(ObjectNode definition, ObjectNode k8sSchemas) {
