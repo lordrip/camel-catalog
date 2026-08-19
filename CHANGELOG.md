@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.8 (2026-08-19)
+
+### Bug Fixes
+
+* **ModelHandler:** handle missing model ([743e668](https://github.com/KaotoIO/camel-catalog/commit/743e6680d46537eb69822ce056430845f9918fc0))
+
 ## 0.8.7 (2026-08-19)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
