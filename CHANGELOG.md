@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2026-08-20)
+
+### Features
+
+* **templates:** publish shared starter templates from @kaoto/camel-catalog ([11c80dc](https://github.com/KaotoIO/camel-catalog/commit/11c80dce6ab4d630232f9531b8f387bcba8f6126))
+
 ## 0.8.9 (2026-08-19)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
