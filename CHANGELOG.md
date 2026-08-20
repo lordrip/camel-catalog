@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.5 (2026-08-20)
+
+### Bug Fixes
+
+* document empty catch block ([55c6f2d](https://github.com/KaotoIO/camel-catalog/commit/55c6f2d45f4e566ba148e1d30e5a928221b6a164))
+
 ## 0.9.4 (2026-08-20)
 
 ### Bug Fixes
