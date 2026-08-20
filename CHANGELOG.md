@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.7 (2026-08-20)
+
+### Bug Fixes
+
+* require full version string match ([8d297d8](https://github.com/KaotoIO/camel-catalog/commit/8d297d84c1fe40fedbbcfb4cfad0d4f219fc0f6e))
+
 ## 0.9.6 (2026-08-20)
 
 ### Bug Fixes
