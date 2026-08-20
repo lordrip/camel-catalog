@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.2 (2026-08-20)
+
+### Bug Fixes
+
+* refactor loops to comply with Sonar rule S135 ([1c9575d](https://github.com/KaotoIO/camel-catalog/commit/1c9575d830f31f87428deaeb9ec046dc92c8a371))
+
 ## 0.9.1 (2026-08-20)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
