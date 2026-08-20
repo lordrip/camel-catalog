@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.4 (2026-08-20)
+
+### Bug Fixes
+
+* rename restricted identifier ([edb1143](https://github.com/KaotoIO/camel-catalog/commit/edb11434db2d6abb10640e6914f9fdf3e1c52e31))
+
 ## 0.9.3 (2026-08-20)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
