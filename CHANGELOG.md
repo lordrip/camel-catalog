@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.6 (2026-08-20)
+
+### Bug Fixes
+
+* rename shadowing variables in EIPHandlerTest ([9a4be13](https://github.com/KaotoIO/camel-catalog/commit/9a4be13a7b06a79167ae005bd66389a893098cf2))
+
 ## 0.9.5 (2026-08-20)
 
 ### Bug Fixes
