@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.9 (2026-08-24)
+
+### Bug Fixes
+
+* replace System.err with logger ([962745b](https://github.com/KaotoIO/camel-catalog/commit/962745b2d9027ccb214384f905a6249d92118d6b))
+
 ## 0.9.8 (2026-08-24)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
