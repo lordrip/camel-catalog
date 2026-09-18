@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.4 (2026-09-18)
+
+### Bug Fixes
+
+* **sonar:** use PROP_REQUIRED constant at L528 in CamelCatalogSchemaEnhancer ([9ce48c1](https://github.com/KaotoIO/camel-catalog/commit/9ce48c11a3e66a92d03a911f5dd400e7ec74c5f9))
+
 ## 0.10.3 (2026-09-18)
 
 **Note:** Version bump only for package @kaoto/camel-catalog
